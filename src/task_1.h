@@ -36,6 +36,7 @@ int main() {
       }
 
       if (min_median < A[i]) {
+
         A.erase(remove(A.begin() + i, A.end(), min_median), A.end());
         N--;
       }

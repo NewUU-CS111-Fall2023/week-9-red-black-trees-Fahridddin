@@ -1,10 +1,9 @@
 #include <iostream>
 
-// Node structure for the Red-Black tree
 struct Node {
   int data;
-  bool color; // true for red, false for black
-  int height; // Tracks the node height
+  bool color;
+  int height; 
   Node* left;
   Node* right;
   Node* parent;
@@ -37,7 +36,6 @@ public:
     }
   }
 
-  // Search for a node with given data
   void search(int data) {
     Node* foundNode = searchNode(data);
     if (foundNode) {
@@ -48,10 +46,8 @@ public:
   }
 
 private:
-  // Root node of the tree
   Node* root;
 
-  // Node search function
   Node* searchNode(int data) {
     Node* current = root;
     while (current) {
@@ -66,11 +62,10 @@ private:
     return nullptr;
   }
 
-  // Node insertion function with parent check and rotations
   void insertNode(Node* parent, Node* newNode) {
     if (!parent) {
       root = newNode;
-      newNode->height = 1; // Root has height 1
+      newNode->height = 1; 
       return;
     }
     if (newNode->data < parent->data) {
@@ -80,10 +75,9 @@ private:
       parent->right = newNode;
       newNode->parent = parent;
     }
-    // Update heights on insert (not shown for brevity)
+
   }
 
-  // Remaining tree operations and height update logic not included for brevity...
 };
 
 int main() {

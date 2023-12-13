@@ -1,7 +1,7 @@
-/*
- * Author:
+/*ID:20221500282
+ * Author:Fahriddin Hayitov
  * Date:
- * Name:
+ * Name:Fahriddin
  */
 
 #include <iostream>
